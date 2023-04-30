@@ -6,15 +6,27 @@ from ast import literal_eval
 from time import sleep
 
 def PostApi(key):#Post Api
-    ApiKey = '输入你的小牛ApiKey'
-    url = 'https://api.niutrans.com/NiuTransServer/translation'
-    date = {'src_text':key,'from':'auto','to':'zh','apikey':ApiKey}#ApiKEY
-    ApiDate = post(url,date)
+    ApiKey = '3975l6lr5pcbvidl6jl2'
+    url = 'http://api.interpreter.caiyunai.com/v1/translator'
+    date = {
+            "source" : key, 
+            "trans_type" : "auto2zh",
+            "request_id" : "demo",
+            "detect": True,
+            }
+    headers = {
+            'content-type': "application/json",
+            'x-authorization': "token " + ApiKey,
+    }
+    while True:
+        ApiDate = post(url,date,headers)
     #print(ApiDate.text)
-    if ApiDate.status_code == 200:
-        sleep(0.05)
-        return literal_eval(ApiDate.text)['tgt_text']
-
+        if ApiDate.status_code == 200:
+            return literal_eval(ApiDate.text)['tgt_text']
+            break
+        else
+            time.sleep(5)
+            
 def TextSegment(DateKeys):#文本分段
     i = len(DateKeys)
     Keys = ''
