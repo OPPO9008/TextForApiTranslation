@@ -3,7 +3,7 @@
 [![ GitHub 许可证](https://img.shields.io/github/license/Abcuders/TextForApiTranslation)](https://github.com/Abcuders/TextForApiTranslation/LICENSE)
 [![GitHub release](https://img.shields.io/github/v/release/Abcuders/TextForApiTranslation)](https://github.com/Abcuders/TextForApiTranslation/releases/)
 
-😀这是一个用来给Mtool提取出的文本进行小牛Api翻译的简单脚本
+😀这是一个用来给Mtool提取出的文本进行彩云小译Api翻译的简单脚本
 
 # ⚠️注意
 * 本程序显然存在诸多问题，在此恳请各位大佬不吝赐教 
